@@ -119,7 +119,7 @@
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
         [self showAlert:msg];
     } else {
-        [self notify:msg];
+        if (!forErrorToLoad) [self notify:msg];
     }
 }
 
